@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clear InCampus localStorage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #3b82f6;
+    }
+    button {
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #2563eb;
+    }
+    .info {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f3f4f6;
+      border-radius: 5px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>Clear InCampus localStorage</h1>
+  <p>Click the button below to clear your browser's localStorage for InCampus and refresh the page.</p>
+  <p>This will fix profile picture issues and ensure you're using the latest mock data.</p>
+  
+  <button onclick="clearStorage()">Clear localStorage & Refresh</button>
+  
+  <div class="info">
+    <p><strong>What this does:</strong></p>
+    <ul>
+      <li>Clears all localStorage data for this site</li>
+      <li>Forces you to log in again</li>
+      <li>Ensures you're using the latest mock user data</li>
+    </ul>
+  </div>
+
+  <script>
+    function clearStorage() {
+      // Clear all localStorage items
+      localStorage.clear();
+      
+      // Log a message
+      console.log('localStorage cleared. Refreshing page...');
+      
+      // Redirect to the main app
+      window.location.href = '/';
+    }
+  </script>
+</body>
+</html> 
